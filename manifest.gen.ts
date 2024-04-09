@@ -66,11 +66,9 @@ const manifest = {
   "sections": {
     "deco-sites/alura/sections/Animation/Animation.tsx": $$$$$$0,
     "deco-sites/alura/sections/Cards/IconCardsCarousel.tsx": $$$$$$1,
-    "deco-sites/alura/sections/Cards/IconCardsCarouselWithImage.tsx":
-      $$$$$$2,
+    "deco-sites/alura/sections/Cards/IconCardsCarouselWithImage.tsx": $$$$$$2,
     "deco-sites/alura/sections/Cards/ImageCardsCarousel.tsx": $$$$$$3,
-    "deco-sites/alura/sections/Cards/ImageCardsCarouselWithImage.tsx":
-      $$$$$$4,
+    "deco-sites/alura/sections/Cards/ImageCardsCarouselWithImage.tsx": $$$$$$4,
     "deco-sites/alura/sections/Category/CategoryBanner.tsx": $$$$$$5,
     "deco-sites/alura/sections/Category/CategoryGrid.tsx": $$$$$$6,
     "deco-sites/alura/sections/Category/CategoryList.tsx": $$$$$$7,
@@ -101,8 +99,7 @@ const manifest = {
     "deco-sites/alura/sections/Miscellaneous/CookieConsent.tsx": $$$$$$32,
     "deco-sites/alura/sections/Miscellaneous/Slide.tsx": $$$$$$33,
     "deco-sites/alura/sections/Newsletter/Newsletter.tsx": $$$$$$34,
-    "deco-sites/alura/sections/Product/ImageGalleryFrontBack.tsx":
-      $$$$$$35,
+    "deco-sites/alura/sections/Product/ImageGalleryFrontBack.tsx": $$$$$$35,
     "deco-sites/alura/sections/Product/NotFound.tsx": $$$$$$36,
     "deco-sites/alura/sections/Product/NotFoundChallenge.tsx": $$$$$$37,
     "deco-sites/alura/sections/Product/ProductDetails.tsx": $$$$$$38,
