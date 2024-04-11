@@ -10,6 +10,13 @@ export default {
       animation: {
         sliding: "sliding 30s linear infinite",
       },
+      screens: {
+        ml2: "800px",
+      },
+      fontFamily: {
+        primary: ["Inter", "sans-serif"],
+        secondary: ["Open Sans", "sans-serif"],
+      },
       keyframes: {
         sliding: {
           "0%": { transform: "translateX(0)" },
