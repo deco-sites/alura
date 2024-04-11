@@ -52,9 +52,10 @@ import * as $$$$$$40 from "./sections/Product/ProductShelfTabbed.tsx";
 import * as $$$$$$41 from "./sections/Product/SearchResult.tsx";
 import * as $$$$$$42 from "./sections/Product/ShelfWithImage.tsx";
 import * as $$$$$$43 from "./sections/Product/Wishlist.tsx";
-import * as $$$$$$44 from "./sections/Social/InstagramPosts.tsx";
-import * as $$$$$$45 from "./sections/Social/WhatsApp.tsx";
-import * as $$$$$$46 from "./sections/Theme/Theme.tsx";
+import * as $$$$$$44 from "./sections/Registration/Registration.tsx";
+import * as $$$$$$45 from "./sections/Social/InstagramPosts.tsx";
+import * as $$$$$$46 from "./sections/Social/WhatsApp.tsx";
+import * as $$$$$$47 from "./sections/Theme/Theme.tsx";
 
 const manifest = {
   "loaders": {
@@ -108,9 +109,10 @@ const manifest = {
     "deco-sites/alura/sections/Product/SearchResult.tsx": $$$$$$41,
     "deco-sites/alura/sections/Product/ShelfWithImage.tsx": $$$$$$42,
     "deco-sites/alura/sections/Product/Wishlist.tsx": $$$$$$43,
-    "deco-sites/alura/sections/Social/InstagramPosts.tsx": $$$$$$44,
-    "deco-sites/alura/sections/Social/WhatsApp.tsx": $$$$$$45,
-    "deco-sites/alura/sections/Theme/Theme.tsx": $$$$$$46,
+    "deco-sites/alura/sections/Registration/Registration.tsx": $$$$$$44,
+    "deco-sites/alura/sections/Social/InstagramPosts.tsx": $$$$$$45,
+    "deco-sites/alura/sections/Social/WhatsApp.tsx": $$$$$$46,
+    "deco-sites/alura/sections/Theme/Theme.tsx": $$$$$$47,
   },
   "apps": {
     "deco-sites/alura/apps/decohub.ts": $$$$$$$$$$$0,
