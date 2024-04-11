@@ -102,21 +102,24 @@ function Footer(
                 {socials.cards.map((social) => (
                   <a class="p-[3px]" href={social.url}>
                     {social.image &&
-                      <>
-                        <Image
-                          class="ml2:hidden max-w-[75px] max-h-[35px] mr-[1.5px]"
-                          src={social.image}
-                          alt="Imagem da rede social"
-                          width={28}
-                          height={28} />
-                        <Image
-                          class="max-w-[75px] max-h-[35px] mr-[1.5px] hidden ml2:block"
-                          src={social.image}
-                          alt="Imagem da rede social"
-                          width={32}
-                          height={32} />
-                      </>
-                    }
+                      (
+                        <>
+                          <Image
+                            class="ml2:hidden max-w-[75px] max-h-[35px] mr-[1.5px]"
+                            src={social.image}
+                            alt="Imagem da rede social"
+                            width={28}
+                            height={28}
+                          />
+                          <Image
+                            class="max-w-[75px] max-h-[35px] mr-[1.5px] hidden ml2:block"
+                            src={social.image}
+                            alt="Imagem da rede social"
+                            width={32}
+                            height={32}
+                          />
+                        </>
+                      )}
                   </a>
                 ))}
               </div>
@@ -179,14 +182,15 @@ function Footer(
               {partners.map((partner) => (
                 <li class="max-w-[250px] mb-3">
                   {partner.image &&
-                    <Image
-                      class={`${`max-w-[${partner.width}] max-h-[${partner.height}] my-3`}`}
-                      src={partner.image}
-                      alt="Imagem do parceiro"
-                      width={partner.width || 160}
-                      height={partner.height}
-                    />
-                  }
+                    (
+                      <Image
+                        class={`${`max-w-[${partner.width}] max-h-[${partner.height}] my-3`}`}
+                        src={partner.image}
+                        alt="Imagem do parceiro"
+                        width={partner.width || 160}
+                        height={partner.height}
+                      />
+                    )}
                   <span class="text-primary text-white text-xs leading-[1.4] pb-3 mb-3">
                     {partner.text}
                   </span>
@@ -250,14 +254,15 @@ function Footer(
                           href={item.url}
                         >
                           {item.image &&
-                            <Image
-                              class="max-w-[30px] max-h-[30px]"
-                              src={item.image}
-                              alt="Ícone do item da coluna"
-                              width={30}
-                              height={30}
-                            />
-                          }
+                            (
+                              <Image
+                                class="max-w-[30px] max-h-[30px]"
+                                src={item.image}
+                                alt="Ícone do item da coluna"
+                                width={30}
+                                height={30}
+                              />
+                            )}
                           <span class="text-[11px] ml-[6px] inline-block text-center">
                             {item.text}
                           </span>
