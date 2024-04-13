@@ -16,6 +16,7 @@ export default {
       fontFamily: {
         primary: ["Inter", "sans-serif"],
         secondary: ["Open Sans", "sans-serif"],
+        terciary: ["Chakra Petch", "sans-serif"],
       },
       keyframes: {
         sliding: {

@@ -417,9 +417,8 @@ const ButtonSizesPreview = () => {
     <div className="flex flex-row gap-2 items-center">
       {Object.entries(buttonSizes).map(([sizeCode, sizeText]) => (
         <button
-          className={`btn capitalize btn-${sizeCode} ${
-            style ? `btn-${style}` : ""
-          }`}
+          className={`btn capitalize btn-${sizeCode} ${style ? `btn-${style}` : ""
+            }`}
         >
           {sizeText}
         </button>
@@ -525,16 +524,14 @@ const PreviewContainer = (
       display: none;
     }
     #${checkboxId}:checked ~ .hide-label {
-      background-color: ${
-    mode === "dark"
+      background-color: ${mode === "dark"
       ? "var(--admin-hover-bg-color)"
       : "var(--admin-text-color-light)"
-  };
-      color: ${
-    mode === "dark"
+    };
+      color: ${mode === "dark"
       ? "var(--admin-text-color-light)"
       : "var(--admin-hover-bg-color)"
-  };
+    };
     }
   `;
 
@@ -564,9 +561,8 @@ const PreviewContainer = (
             </label>
             <div
               id={codeBlockId}
-              className={`mt-4 mb-2 text-xs md:text-sm ${
-                mode === "dark" ? "bg-slate-800" : "bg-slate-100"
-              }`}
+              className={`mt-4 mb-2 text-xs md:text-sm ${mode === "dark" ? "bg-slate-800" : "bg-slate-100"
+                }`}
             >
               <pre className="p-4 overflow-x-auto">{codeString}</pre>
             </div>
