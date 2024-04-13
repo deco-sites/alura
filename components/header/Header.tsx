@@ -17,7 +17,7 @@ export default function Header({
   url,
 }: Props) {
   return (
-    <header class="w-full py-6 bg-[#051933] flex items-center justify-center">
+    <header class="relative z-10 w-full py-6 bg-[#051933] flex items-center justify-center">
       <a href={url}>
         <Image
           class="max-w-[75px] max-h-[35px]"

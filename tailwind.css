@@ -3,7 +3,6 @@
 @tailwind utilities;
 
 @layer base {
-
   /* Allow changing font family via CMS */
   html {
     font-family: var(--font-family);
@@ -14,8 +13,8 @@
   }
 
   /** Remove default styles from input[type=number] */
-  input[type=number]::-webkit-inner-spin-button,
-  input[type=number]::-webkit-outer-spin-button {
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
   }
@@ -25,6 +24,49 @@
   body:has(.modal-toggle:checked) {
     overflow: hidden;
     height: 100vh;
+  }
+  @media screen and (max-width: 768px) {
+    body::before {
+      content: "";
+      position: absolute;
+      width: 798px;
+      height: 516px;
+      left: -303px;
+      top: 120px;
+      background: radial-gradient(
+          73.58% 73.58% at 93.75% 46.5%,
+          #051933 0%,
+          #167bf7 100%
+        ),
+        radial-gradient(73.58% 73.58% at 98.4% 50%, #051933 0%, #8e2de2 100%);
+      mix-blend-mode: normal;
+      opacity: 0.4;
+      filter: blur(67.957px);
+      -webkit-transform: rotate(-29deg);
+      transform: rotate(-29deg);
+      z-index: 2;
+    }
+  }
+
+  body::after {
+    content: "";
+    position: absolute;
+    width: 798px;
+    height: 516px;
+    right: -380px;
+    top: 755.88px;
+    background: radial-gradient(
+        73.58% 73.58% at 93.75% 46.5%,
+        #051933 0%,
+        #167bf7 100%
+      ),
+      radial-gradient(73.58% 73.58% at 98.4% 50%, #051933 0%, #8e2de2 100%);
+    mix-blend-mode: normal;
+    opacity: 0.4;
+    filter: blur(67.957px);
+    -webkit-transform: rotate(-29deg);
+    transform: rotate(-29deg);
+    z-index: 2;
   }
 }
 
@@ -42,15 +84,15 @@
 }
 
 .group:disabled .group-disabled\:animate-progress {
-  animation: progress-frame ease normal
+  animation: progress-frame ease normal;
 }
 
 @keyframes progress-frame {
   0% {
-    --dot-progress: 0%
+    --dot-progress: 0%;
   }
 
   to {
-    --dot-progress: 100%
+    --dot-progress: 100%;
   }
 }
