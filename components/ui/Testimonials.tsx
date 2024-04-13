@@ -21,7 +21,7 @@ export default function Testimonials(
 ) {
     const id = useId();
     return (
-        <div class="relative py-24 bg-black">
+        <div class="relative py-24 bg-black" id={id}>
             <div class="px-4 lg:px-10 max-w-[1280px] xl:px-0 xl:mx-auto xl:w-[1200px]">
                 <div class="max-w-[80%] mx-auto">
                     <div class="flex justify-between items-end">
