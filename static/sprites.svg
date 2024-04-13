@@ -109,5 +109,5 @@
 		<path d="M18 6m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path><path d="M18 18m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path><path d="M8.7 10.7l6.6 -3.4"></path>
 		<path d="M8.7 13.3l6.6 3.4"></path>
     </symbol>
-
+	<symbol id="RightArrow" xmlns="http://www.w3.org/2000/svg" width="13" height="23" fill="none" class="svg-convert"><path d="m2.56.44 9.547 9.545a1.5 1.5 0 0 1 0 2.122L2.56 21.653A1.5 1.5 0 1 1 .439 19.53l8.486-8.485L.439 2.56A1.5 1.5 0 1 1 2.561.439Z" clip-rule="evenodd"></path></symbol>
 </svg>

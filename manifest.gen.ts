@@ -56,7 +56,8 @@ import * as $$$$$$44 from "./sections/Reasons/Reasons.tsx";
 import * as $$$$$$45 from "./sections/Registration/Registration.tsx";
 import * as $$$$$$46 from "./sections/Social/InstagramPosts.tsx";
 import * as $$$$$$47 from "./sections/Social/WhatsApp.tsx";
-import * as $$$$$$48 from "./sections/Theme/Theme.tsx";
+import * as $$$$$$48 from "./sections/Testimonials/Testimonials.tsx";
+import * as $$$$$$49 from "./sections/Theme/Theme.tsx";
 
 const manifest = {
   "loaders": {
@@ -114,7 +115,8 @@ const manifest = {
     "deco-sites/alura/sections/Registration/Registration.tsx": $$$$$$45,
     "deco-sites/alura/sections/Social/InstagramPosts.tsx": $$$$$$46,
     "deco-sites/alura/sections/Social/WhatsApp.tsx": $$$$$$47,
-    "deco-sites/alura/sections/Theme/Theme.tsx": $$$$$$48,
+    "deco-sites/alura/sections/Testimonials/Testimonials.tsx": $$$$$$48,
+    "deco-sites/alura/sections/Theme/Theme.tsx": $$$$$$49,
   },
   "apps": {
     "deco-sites/alura/apps/decohub.ts": $$$$$$$$$$$0,
