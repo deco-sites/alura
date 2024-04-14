@@ -17,6 +17,7 @@ export default {
         primary: ["Inter", "sans-serif"],
         secondary: ["Open Sans", "sans-serif"],
         terciary: ["Chakra Petch", "sans-serif"],
+        quartenary: ["Roboto Mono", "sans-serif"],
       },
       keyframes: {
         sliding: {
