@@ -18,6 +18,8 @@ export default defineApp(async (_req, ctx) => {
 
       {/* Include Icons and manifest */}
       <Head>
+        {/* Title */}
+        <title>Promoção Alura Cursos Online</title>
         {/* Enable View Transitions API */}
         <meta name="view-transition" content="same-origin" />
 
