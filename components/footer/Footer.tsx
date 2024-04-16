@@ -152,7 +152,7 @@ function Footer(
                 </ul>
               </div>
             ))}
-            <div class="max-w-[243px] ml2:max-w-[350px] ml2:min-w-[350px] ml2:mr-[10px]">
+            {/* <div class="max-w-[243px] ml2:max-w-[350px] ml2:min-w-[350px] ml2:mr-[10px]">
               <div class="block mt-[55px] ml2:mt-0">
                 <h2 class="text-lg ml2:text-sm ml2:font-bold pb-3 text-white">
                   Novidades e Lançamentos
@@ -168,7 +168,7 @@ function Footer(
                   </button>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
 
           <div class="hidden ml2:block">
