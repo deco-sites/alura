@@ -141,6 +141,7 @@ function Footer(
                   {column.content?.map((item) => (
                     <li class="pb-3 font-normal text-sm leading-[1.275rem] ml2:leading-[1.75rem] text-white">
                       <a
+                        class="ml2:leading-[1.5]"
                         href={item.url}
                         dangerouslySetInnerHTML={{
                           __html: item.text,

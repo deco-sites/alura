@@ -1,1 +1,1 @@
-export { default } from "../../components/ui/Plans.tsx";
+export { default } from "../../islands/Plans.tsx";
