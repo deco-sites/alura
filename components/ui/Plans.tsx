@@ -37,14 +37,14 @@ function Tooltips({ list }: { list: ContentList }) {
   return (
     <li
       style="background-image: url(/image/icon-check.svg); background-repeat: no-repeat; background-position: center left 3%; background-size: 15px;"
-      class={`flex items-center mb-4 text-[14px] text-[#D7F9FF] flex-wrap gap-2 pl-8 ${list.highlight
+      class={`flex items-center mb-4 text-[14px] text-[#D7F9FF] flex-wrap gap-2 pl-8 lg:w-[95%] ${list.highlight
         ? `listHighlight border-solid border-[1px] border-[#0E4953] bg-[#142342] p-[.6rem] relative`
         : ""
         }`}
     >
       <div class="max-w-[85%]">
         {list.listText && (
-          <span
+          <span class="cardBold"
             dangerouslySetInnerHTML={{
               __html: list.listText,
             }}
@@ -53,20 +53,27 @@ function Tooltips({ list }: { list: ContentList }) {
         )}
         <div
           style="background-image: url(/image/icon-como-funciona.svg); background-size: contain; background-repeat: no-repeat;"
-          class={`${tooltip.value === true ? `tooltipFit` : ''} inline-block relative top-[2px] w-[14px] h-[14px] cursor-pointer ml-[4px] mt-[2px]`}
+          class={`${tooltip.value === true ? `tooltipFit` : ""
+            } inline-block relative top-[2px] w-[14px] h-[14px] cursor-pointer ml-[4px] mt-[2px]`}
           onClick={() => (tooltip.value = !tooltip.value)}
         >
-          {list.tooltipText && <p class={`${tooltip.value === true ? `opacity-100 visible` : 'opacity-0 invisible'} absolute tooltipPosition right-[-95px] text-[14px] leading-[1.47] bg-[#01080E] rounded-[2px] px-[15px] py-3 pb-[15px] w-[65vw] max-w-[200px] z-20`}>
-            {list.tooltipText}
-          </p>}
+          {list.tooltipText && (
+            <p
+              class={`${tooltip.value === true
+                ? `opacity-100 visible`
+                : "opacity-0 invisible"
+                } absolute tooltipPosition right-[-95px] text-[14px] leading-[1.47] bg-[#01080E] rounded-[2px] px-[15px] py-3 pb-[15px] w-[65vw] max-w-[200px] z-20`}
+            >
+              {list.tooltipText}
+            </p>
+          )}
         </div>
       </div>
     </li>
-  )
+  );
 }
 
 export default function Plans({ title, subTitle, cards }: Props) {
-
   return (
     <>
       <style
@@ -129,6 +136,10 @@ export default function Plans({ title, subTitle, cards }: Props) {
     height: 50%;
     -webkit-transform: rotate(-10deg);
     transform: rotate(-10deg);
+                }
+
+                .cardBold strong {
+                  color: #6CDCFF;
                 }
 
                 .listHighlight::before {
@@ -210,11 +221,11 @@ export default function Plans({ title, subTitle, cards }: Props) {
         class="bg-[#01080E] w-full min-h-full relative"
       >
         <div class=" pt-12 text-center text-white">
-          <div class="px-4 relative z-10">
-            <h1 class="text-white font-black text-[36px] leading-[2.6563rem] tracking-[1px] pb-6 mx-auto mt-[25px] mb-[15px] titulo-destaque">
+          <div class="px-4 relative lg:max-w-[1280px] lg:px-0 xl:w-[1200px] xl:mx-auto z-10">
+            <h1 class="text-white font-black text-[36px] lg:text-[64px] leading-[2.6563rem] lg:leading-[4.125rem] tracking-[1px] pb-6 mx-auto mt-[25px] mb-[15px] titulo-destaque">
               {title}
             </h1>
-            <h2 class="text-white text-[14px] leading-[1.4063rem] text-center tracking-[.5px] mb-0 mx-auto subtitulo-destaque">
+            <h2 class="text-white text-[14px] lg:text-[30px] leading-[1.4063rem] lg:leading-[2.4375rem] text-center tracking-[.5px] lg:tracking-[1px] mb-0 mx-auto subtitulo-destaque">
               {subTitle}
             </h2>
           </div>
@@ -240,12 +251,12 @@ export default function Plans({ title, subTitle, cards }: Props) {
                         <div class="relative">
                           <div
                             style="background-image: url(/image/texto-selo.svg); background-size: 100%; background-repeat: no-repeat; animation: loading 50s linear infinite;"
-                            class="w-[90px] h-[90px] right-[-180px] relative z-50 top-[7px] lg:w-[120px] lg:h-[120px] lg:right-[-270px] lg:top-[23px]"
+                            class="w-[90px] h-[90px] right-[-180px] relative z-50 top-[7px] lg:w-[120px] lg:h-[120px] lg:right-[-270px] lg:top-[23px] xl:w-[140px] xl:h-[140px] xl:right-[-281px] xl:top-0"
                           >
                           </div>
                           <span
                             style="background-image: url(/image/selo-card.webp); background-size: contain; background-repeat: no-repeat;"
-                            class="relative block top-[-120px] right-[-120px] z-40 w-[250px] h-[250px] lg:w-[350px] lg:h-[350px] lg:right-[-182px] lg:top-[-151px]"
+                            class="relative block top-[-120px] right-[-120px] z-40 w-[250px] h-[250px] lg:w-[350px] lg:h-[350px] lg:right-[-182px] lg:top-[-151px] xl:w-[400px] xl:h-[400px] xl:top-[-200px]"
                           >
                           </span>
                         </div>
