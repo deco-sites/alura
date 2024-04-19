@@ -341,7 +341,7 @@ export default function Plans({ title, subTitle, cards }: Props) {
                 ))}
               </div>
               <a
-                class="text-[#2BDEFD] mb-28 mt-8 flex items-center justify-center"
+                class="text-[#2BDEFD] mb-28 mt-8 flex items-center justify-center underline"
                 href="/empresas"
               >
                 Conheça os planos para empresas
