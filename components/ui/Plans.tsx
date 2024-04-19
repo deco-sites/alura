@@ -1,5 +1,12 @@
 import type { ImageWidget } from "apps/admin/widgets.ts";
 import Image from "apps/website/components/Image.tsx";
+import { Signal, useSignal } from "@preact/signals";
+
+interface ContentList {
+  listText?: string;
+  highlight?: boolean;
+  tooltipText?: string;
+}
 
 export interface Props {
   title?: string;
@@ -18,18 +25,48 @@ export interface Props {
       numberOfInstallments?: string;
       installmentsValue?: string;
       cashPaymentValue?: string;
-      contentList: {
-        listText?: string;
-        highlight?: boolean;
-      }[];
-
+      contentList: ContentList[];
       buttonText: string;
       buttonUrl: string;
     }[];
   };
 }
 
+function Tooltips({ list }: { list: ContentList }) {
+  const tooltip = useSignal(false);
+  return (
+    <li
+      style="background-image: url(/image/icon-check.svg); background-repeat: no-repeat; background-position: center left 3%; background-size: 15px;"
+      class={`flex items-center mb-4 text-[14px] text-[#D7F9FF] flex-wrap gap-2 pl-8 ${list.highlight
+        ? `listHighlight border-solid border-[1px] border-[#0E4953] bg-[#142342] p-[.6rem] relative`
+        : ""
+        }`}
+    >
+      <div class="max-w-[85%]">
+        {list.listText && (
+          <span
+            dangerouslySetInnerHTML={{
+              __html: list.listText,
+            }}
+          >
+          </span>
+        )}
+        <div
+          style="background-image: url(/image/icon-como-funciona.svg); background-size: contain; background-repeat: no-repeat;"
+          class={`${tooltip.value === true ? `tooltipFit` : ''} inline-block relative top-[2px] w-[14px] h-[14px] cursor-pointer ml-[4px] mt-[2px]`}
+          onClick={() => (tooltip.value = !tooltip.value)}
+        >
+          {list.tooltipText && <p class={`${tooltip.value === true ? `opacity-100 visible` : 'opacity-0 invisible'} absolute tooltipPosition right-[-95px] text-[14px] leading-[1.47] bg-[#01080E] rounded-[2px] px-[15px] py-3 pb-[15px] w-[65vw] max-w-[200px] z-20`}>
+            {list.tooltipText}
+          </p>}
+        </div>
+      </div>
+    </li>
+  )
+}
+
 export default function Plans({ title, subTitle, cards }: Props) {
+
   return (
     <>
       <style
@@ -141,6 +178,30 @@ export default function Plans({ title, subTitle, cards }: Props) {
             width: 75%;
         }
       }
+
+      .tooltipPosition {
+        top: calc(100% + 9px);
+        -webkit-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+      }
+
+      .tooltipFit::before {
+        content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    z-index: 11;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    height: 0;
+    width: 0;
+    border-bottom: solid 10px #01080E;
+    border-left: solid 8px transparent;
+    border-right: solid 8px transparent;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+      }
+
       `,
         }}
       />
@@ -168,13 +229,11 @@ export default function Plans({ title, subTitle, cards }: Props) {
                   <div
                     key={index}
                     style="filter: drop-shadow(0 5px 10px rgba(0,0,0,.2))"
-                    class={`w-full max-w-[380px] relative mx-auto lg:mx-[initial] ${
-                      index === 1 ? "md:ml-[-1rem]" : ""
-                    } ${
-                      card.highlight
+                    class={`w-full max-w-[380px] relative mx-auto lg:mx-[initial] ${index === 1 ? "md:ml-[-1rem]" : ""
+                      } ${card.highlight
                         ? `border-t-[10px] border-solid border-[#6CDCFF]`
                         : ""
-                    }`}
+                      }`}
                   >
                     {card.highlight && (
                       <div class="absolute top-[-40px] right-0">
@@ -254,30 +313,7 @@ export default function Plans({ title, subTitle, cards }: Props) {
                         </div>
                         <ul class="px-8">
                           {card.contentList.map((list) => (
-                            <li
-                              style="background-image: url(/image/icon-check.svg); background-repeat: no-repeat; background-position: center left 3%; background-size: 15px;"
-                              class={`flex items-center mb-4 text-[14px] text-[#D7F9FF] flex-wrap gap-2 pl-8 ${
-                                list.highlight
-                                  ? `listHighlight border-solid border-[1px] border-[#0E4953] bg-[#142342] p-[.6rem] relative`
-                                  : ""
-                              }`}
-                            >
-                              <div class="max-w-[85%]">
-                                {list.listText && (
-                                  <span
-                                    dangerouslySetInnerHTML={{
-                                      __html: list.listText,
-                                    }}
-                                  >
-                                  </span>
-                                )}
-                                <div
-                                  style="background-image: url(/image/icon-como-funciona.svg); background-size: contain; background-repeat: no-repeat;"
-                                  class="inline-block relative top-[2px] w-[14px] h-[14px] cursor-pointer ml-[4px] mt-[2px]"
-                                >
-                                </div>
-                              </div>
-                            </li>
+                            <Tooltips list={list} />
                           ))}
                         </ul>
 
